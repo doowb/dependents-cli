@@ -30,8 +30,17 @@
     "yargs-parser": "^2.4.1"
   },
   "keywords": [
+    "api",
     "cli",
-    "dependents"
+    "dependents",
+    "downloads",
+    "module",
+    "module-dependents",
+    "npm",
+    "npm-api",
+    "npm-dependents",
+    "package",
+    "package-dependents"
   ],
   "verb": {
     "layout": "global",
