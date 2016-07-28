@@ -1,6 +1,6 @@
 # dependents-cli [![NPM version](https://img.shields.io/npm/v/dependents-cli.svg?style=flat)](https://www.npmjs.com/package/dependents-cli) [![NPM downloads](https://img.shields.io/npm/dm/dependents-cli.svg?style=flat)](https://npmjs.org/package/dependents-cli)
 
-CLI for the module-dependents project.
+CLI for listing an npm module's dependent projects and their download stats.
 
 You might also be interested in [module-dependents](https://github.com/doowb/module-dependents).
 
