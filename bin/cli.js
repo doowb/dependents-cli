@@ -1,16 +1,22 @@
 #!/usr/bin/env node
 
-var argv = require('yargs-parser')(process.argv.slice(2));
+var argv = require('yargs-parser')(process.argv.slice(2), {
+  boolean: ['downloads'],
+  default: {
+    downloads: true,
+    format: 'table'
+  },
+  alias: {
+    downloads: 'd',
+    format: 'f'
+  }
+});
 var Table = require('cli-table');
 var cli = require('../');
 
 var options = argv;
 if (argv._.length) {
   options.repo = argv._[0];
-}
-
-if (options.format === true) {
-  options.format = 'table';
 }
 
 cli(options, function(err, dependents) {
