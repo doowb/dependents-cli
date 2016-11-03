@@ -56,19 +56,40 @@ function createTable(dependents) {
   }
 
   var table = new Table({
+    style: {compact: true},
     head: head,
     colWidths: colWidths,
     colAligns: colAligns
   });
 
+  var total = 0;
+  var last30 = 0;
+  var versions = [];
   for (var i = 0; i < dependents.length; i++) {
     var repo = dependents[i];
-    var row = [repo.name, repo[`${options.repo}-version`]];
+    var version = repo[`${options.repo}-version`];
+    if (versions.indexOf(version) === -1) {
+      versions.push(version);
+    }
+
+    var row = [repo.name, version];
     if (options.downloads) {
+      total += repo.downloads.total;
+      last30 += repo.downloads.last30;
       row.push(repo.downloads.last30, repo.downloads.total);
     }
     table.push(row);
   }
+
+  // empty row to separate summary
+  table.push([]);
+
+  // summary row
+  var summary = [`${dependents.length} depenents`, `${versions.length} versions`];
+  if (options.downloads) {
+    summary.push(last30, total);
+  }
+  table.push(summary);
 
   return table.toString();
 }
