@@ -15,6 +15,7 @@ if (options.format === true) {
 
 cli(options, function(err, dependents) {
   if (err) {
+    console.error('error getting dependents for [' + options.repo + ']', err);
     console.error(err.message);
     process.exit(1);
     return;
