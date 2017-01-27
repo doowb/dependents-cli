@@ -85,7 +85,7 @@ function createTable(dependents) {
   table.push([]);
 
   // summary row
-  var summary = [`${dependents.length} depenents`, `${versions.length} versions`];
+  var summary = [`${dependents.length} dependents`, `${versions.length} versions`];
   if (options.downloads) {
     summary.push(last30, total);
   }
