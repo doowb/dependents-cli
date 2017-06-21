@@ -4,6 +4,10 @@
   "version": "0.1.3",
   "homepage": "https://github.com/doowb/dependents-cli",
   "author": "Brian Woodward (https://github.com/doowb)",
+  "contributors": [
+    "Brian Woodward (https://twitter.com/doowb)",
+    "Filip Skokan (https://github.com/panva)"
+  ],
   "repository": "doowb/dependents-cli",
   "bugs": {
     "url": "https://github.com/doowb/dependents-cli/issues"
@@ -28,6 +32,9 @@
     "co": "^4.6.0",
     "module-dependents": "^0.1.3",
     "yargs-parser": "^2.4.1"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^0.1.9"
   },
   "keywords": [
     "api",
@@ -56,18 +63,15 @@
     "related": {
       "highlight": "module-dependents",
       "list": [
+        "download-stats",
         "module-dependents",
         "npm-api",
-        "npm-api-dependents",
-        "download-stats"
+        "npm-api-dependents"
       ]
     },
     "reflinks": [
-      "verb-generate-readme",
-      "verb"
+      "verb",
+      "verb-generate-readme"
     ]
-  },
-  "devDependencies": {
-    "gulp-format-md": "^0.1.9"
   }
 }
