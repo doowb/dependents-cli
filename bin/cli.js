@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var argv = require('yargs-parser')(process.argv.slice(2), {
+var argv = require('minimist')(process.argv.slice(2), {
   boolean: ['downloads'],
   default: {
     downloads: true,
@@ -11,6 +11,7 @@ var argv = require('yargs-parser')(process.argv.slice(2), {
     format: 'f'
   }
 });
+
 var Table = require('cli-table');
 var cli = require('../');
 
