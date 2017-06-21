@@ -76,7 +76,7 @@ function createTable(dependents) {
     if (options.downloads) {
       total += repo.downloads.total;
       last30 += repo.downloads.last30;
-      row.push(repo.downloads.last30, repo.downloads.total);
+      row.push(repo.downloads.last30.toLocaleString(), repo.downloads.total.toLocaleString());
     }
     table.push(row);
   }
@@ -87,7 +87,7 @@ function createTable(dependents) {
   // summary row
   var summary = [`${dependents.length} dependents`, `${versions.length} versions`];
   if (options.downloads) {
-    summary.push(last30, total);
+    summary.push(last30.toLocaleString(), total.toLocaleString());
   }
   table.push(summary);
 
